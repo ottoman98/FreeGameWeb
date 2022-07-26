@@ -1,0 +1,25 @@
+.cards-container {
+  margin: 0 auto;
+  padding-left: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+}
+
+h2 {
+  margin: 25px;
+}
+
+.showmore-button {
+  background-color: #b4c8c8;
+  max-width: 150px;
+  margin: 20px auto;
+  display: block;
+  border-color: white;
+}
+
+.showmore-button:hover {
+  background-color: #045c5c;
+  color: white;
+  border-color: black;
+}/*# sourceMappingURL=list.css.map */

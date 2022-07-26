@@ -1,0 +1,41 @@
+.details-content {
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+}
+
+.img-detail {
+  max-width: 100%;
+  margin: 10px;
+  border-radius: 5%;
+}
+
+.details-tags {
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 10px;
+}
+.details-tags p {
+  margin: 10px;
+}
+
+.details-description {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 10px;
+}
+
+.screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.screenshot {
+  max-width: 40vw;
+  max-height: 40vh;
+  margin: 10px;
+  border-radius: 5%;
+}/*# sourceMappingURL=gamedetails.css.map */
