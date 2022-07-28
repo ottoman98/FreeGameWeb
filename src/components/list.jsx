@@ -2,16 +2,23 @@ import { React, useState, useEffect } from 'react';
 import Card from './card';
 import '../styles/list/list.css';
 import useApi from '../hooks/useapi';
-import { useParams } from 'react-router-dom';
-import LoadingPage from '../pages/loading';
+import { useLocation } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import LoadingPage from './loadingPage';
 
 function List() {
-  const data = useApi(
-    'https://free-to-play-games-database.p.rapidapi.com/api/games'
-  );
+  const urlBase =
+    'https://free-to-play-games-database.p.rapidapi.com/api/games';
+  const urlGenre =
+    'https://free-to-play-games-database.p.rapidapi.com/api/games?category=';
+
+  const location = useLocation().pathname.replace('/', '');
+
+  const data = useApi(location == '' ? urlBase : urlGenre + location);
 
   const [showMore, useShowMore] = useState(12);
+
+  data ? console.log(data) : null;
 
   return (
     <>
@@ -19,7 +26,7 @@ function List() {
         <LoadingPage />
       ) : (
         <>
-          <h2>Latest releases</h2>
+          <h2>Latest Releases</h2>
           <div className="cards-container">
             {data.slice(0, showMore).map((x) => {
               return (
@@ -36,6 +43,7 @@ function List() {
             })}
           </div>
           <Button
+            hidden
             onClick={() => {
               useShowMore(showMore + 12);
             }}

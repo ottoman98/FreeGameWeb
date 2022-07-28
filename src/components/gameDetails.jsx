@@ -2,24 +2,27 @@ import React from 'react';
 import useApi from '../hooks/useapi';
 import { useParams } from 'react-router';
 import '../styles/gameDetails/gamedetails.css';
+import LoadingPage from './loadingPage';
 
 function GameDetails() {
   const { id } = useParams();
+
   const data = useApi(
     'https://free-to-play-games-database.p.rapidapi.com/api/game?id=' + id
   );
-  console.log(data);
 
   return (
     <>
       {!data ? (
-        'loading'
+        <LoadingPage />
       ) : (
         <>
           <div
             className="main-div"
             style={{
-              background: `url(${data.screenshots[0].image}) no-repeat`,
+              background: `url(${
+                data.screenshots.length > 0 ? data.screenshots[0].image : ''
+              }) no-repeat`,
               backgroundSize: 'cover',
             }}
           >
@@ -57,29 +60,34 @@ function GameDetails() {
                   <div className="requirements">
                     {Object.keys(data.minimum_system_requirements).map((x) => {
                       return (
-                        <>
-                          <ul>
-                            <li>
-                              <b>{x.charAt(0).toUpperCase() + x.slice(1)}: </b>
-                              {data.minimum_system_requirements[x]}
-                            </li>
-                          </ul>
-                        </>
+                        <ul>
+                          <li key={1}>
+                            <b>{x.charAt(0).toUpperCase() + x.slice(1)}: </b>
+                            {data.minimum_system_requirements[x]}
+                          </li>
+                        </ul>
                       );
                     })}
                   </div>
                 </>
               ) : null}
-              <h4>ScreenShots</h4>
-              <div className="screenshots">
-                {data.screenshots.slice(1).map((x) => {
-                  return (
-                    <>
-                      <img className="screenshot" src={x.image} alt="" />
-                    </>
-                  );
-                }, 1)}
-              </div>
+              {data.screenshots.length > 0 == false ? null : (
+                <>
+                  <h4>ScreenShots</h4>
+                  <div className="screenshots">
+                    {data.screenshots.slice(1).map((x) => {
+                      return (
+                        <img
+                          className="screenshot"
+                          key={x.id}
+                          src={x.image}
+                          alt=""
+                        />
+                      );
+                    })}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </>

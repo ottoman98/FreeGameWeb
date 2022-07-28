@@ -8,28 +8,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import '../styles/header/header.css';
+import genres from '../utils/genresArray';
 
 function NavScroll() {
-  const genres = [
-    'MMOARPG',
-    'ARPG',
-    'Shooter',
-    'MMORPG',
-    'Action RPG',
-    'Battle Royale',
-    'Strategy',
-    'Sports',
-    'Moba',
-    'Fighting',
-    'Card',
-    'MMO',
-    'MOBA',
-    'Card Game',
-    'Racing',
-    'Social',
-    ' MMORPG',
-    'Fantasy',
-  ].sort();
+  genres.sort();
 
   return (
     <Navbar expand="lg" className="navbar">
@@ -47,7 +29,7 @@ function NavScroll() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/" disabled>
+            <Nav.Link as={Link} to="/">
               Random Game
             </Nav.Link>
             <NavDropdown title="Genres" id="navbarScrollingDropdown">
@@ -57,14 +39,12 @@ function NavScroll() {
                   <NavDropdown.Item
                     key={spacesOut}
                     as={Link}
-                    to={'/' + spacesOut}
-                    disabled
+                    to={'/' + spacesOut.toLowerCase()}
                   >
                     <p className="genres-items">{x}</p>
                   </NavDropdown.Item>
                 );
               })}
-
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
                 Something else here

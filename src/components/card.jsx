@@ -12,7 +12,7 @@ function Card(props) {
           <p className="genre-tag tag">{props.genre}</p>
         </div>
         <div className="about">
-          <Link className="link" as={Link} to={'/' + props.id}>
+          <Link className="link" as={Link} to={'/game/' + props.id}>
             <h3>{props.title}</h3>
           </Link>
           <p className="description">{props.description}</p>
