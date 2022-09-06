@@ -1,8 +1,13 @@
+.main-div {
+  min-height: 100vh;
+}
+
 .details-content {
   max-width: 80%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
+  min-height: 100vh;
 }
 
 .img-detail {
@@ -38,4 +43,4 @@
   max-height: 40vh;
   margin: 10px;
   border-radius: 5%;
-}/*# sourceMappingURL=gamedetails.css.map */
+} /*# sourceMappingURL=gamedetails.css.map */

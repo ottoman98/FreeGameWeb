@@ -1,104 +1,76 @@
 import React from 'react';
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon,
-  MDBBtn,
-} from 'mdb-react-ui-kit';
+import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
+import '../styles/footer/footer.css';
 
-export default function Footer() {
+export const Footer = () => {
   return (
-    <MDBFooter
-      className="text-center text-white"
-      style={{ backgroundColor: '#f1f1f1' }}
-    >
-      <MDBContainer className="pt-4">
-        <section className="mb-4">
-          <MDBBtn
-            rippleColor="dark"
-            link
-            floating
-            size="lg"
-            className="text-dark m-1"
-            href="#!"
-            role="button"
-          >
-            <MDBIcon fab className="fab fa-facebook-f" />
-          </MDBBtn>
-
-          <MDBBtn
-            rippleColor="dark"
-            link
-            floating
-            size="lg"
-            className="text-dark m-1"
-            href="#!"
-            role="button"
-          >
-            <MDBIcon fab className="fa-twitter" />
-          </MDBBtn>
-
-          <MDBBtn
-            rippleColor="dark"
-            link
-            floating
-            size="lg"
-            className="text-dark m-1"
-            href="#!"
-            role="button"
-          >
-            <MDBIcon fab className="fa-google" />
-          </MDBBtn>
-
-          <MDBBtn
-            rippleColor="dark"
-            link
-            floating
-            size="lg"
-            className="text-dark m-1"
-            href="#!"
-            role="button"
-          >
-            <MDBIcon fab className="fa-instagram" />
-          </MDBBtn>
-
-          <MDBBtn
-            rippleColor="dark"
-            link
-            floating
-            size="lg"
-            className="text-dark m-1"
-            href="#!"
-            role="button"
-          >
-            <MDBIcon fab className="fa-linkedin" />
-          </MDBBtn>
-
-          <MDBBtn
-            rippleColor="dark"
-            link
-            floating
-            size="lg"
-            className="text-dark m-1"
-            href="#!"
-            role="button"
-          >
-            <MDBIcon fab className="fa-github" />
-          </MDBBtn>
-        </section>
-      </MDBContainer>
-
-      <div
-        className="text-center text-dark p-3"
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+    <CDBFooter className="shadow footer-external-style">
+      <CDBBox
+        display="flex"
+        flex="column"
+        className="mx-auto py-5"
+        style={{ width: '90%' }}
       >
-        © 2020 Copyright:
-        <a className="text-dark" href="https://mdbootstrap.com/">
-          MDBootstrap.com
-        </a>
-      </div>
-    </MDBFooter>
+        <CDBBox display="flex" justifyContent="between" className="flex-wrap">
+          <CDBBox>
+            <a href="/" className="d-flex align-items-center p-0 text-dark">
+              <img alt="logo" src="logo" width="30px" />
+              <span className="ml-3 h5 font-weight-bold">Devwares</span>
+            </a>
+            <p className="my-3" style={{ width: '250px' }}>
+              We are creating High Quality Resources and tools to Aid developers
+              during the developement of their projects
+            </p>
+            <CDBBox display="flex" className="mt-4">
+              <CDBBtn flat color="dark">
+                <CDBIcon fab icon="facebook-f" />
+              </CDBBtn>
+              <CDBBtn flat color="dark" className="mx-3">
+                <CDBIcon fab icon="linkedin" />
+              </CDBBtn>
+              <CDBBtn flat color="dark" className="p-2">
+                <CDBIcon fab icon="instagram" />
+              </CDBBtn>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+              Devwares
+            </p>
+            <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+              <CDBFooterLink href="/">Resources</CDBFooterLink>
+              <CDBFooterLink href="/">About Us</CDBFooterLink>
+              <CDBFooterLink href="/">Contact</CDBFooterLink>
+              <CDBFooterLink href="/">Blog</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+              Help
+            </p>
+            <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+              <CDBFooterLink href="/">Support</CDBFooterLink>
+              <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+              <CDBFooterLink href="/">Sign In</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+              Products
+            </p>
+            <CDBBox flex="column" style={{ cursor: 'pointer', padding: '0' }}>
+              <CDBFooterLink href="/">Windframe</CDBFooterLink>
+              <CDBFooterLink href="/">Loop</CDBFooterLink>
+              <CDBFooterLink href="/">Contrast</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+        </CDBBox>
+        <small className="text-center mt-5">
+          &copy; Devwares, 2020. All rights reserved.
+        </small>
+      </CDBBox>
+    </CDBFooter>
   );
-}
+};
+
+export default Footer;
