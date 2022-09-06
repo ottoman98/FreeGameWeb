@@ -4,12 +4,11 @@ import '../styles/loadingpage/loadingpage.css';
 function LoadingPage() {
   return (
     <>
-      <div className="loading-div">
-        <img
-          className="gigachad"
-          src="https://c.tenor.com/qOI3iBvktYcAAAAd/giga-chad.gif"
-          alt=""
-        />
+      <div className="container">
+        <div className="item item-1"></div>
+        <div className="item item-2"></div>
+        <div className="item item-3"></div>
+        <div className="item item-4"></div>
       </div>
     </>
   );

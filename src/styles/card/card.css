@@ -11,7 +11,7 @@
   position: initial;
   z-index: 111;
   background: #fff;
-  transition: 0s;
+  transition: 0.2s;
 }
 
 .img {

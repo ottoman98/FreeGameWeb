@@ -19,9 +19,7 @@ const useApi = (url) => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      apiFetch();
-    }, 1000);
+    apiFetch();
   }, []);
   return data;
 };

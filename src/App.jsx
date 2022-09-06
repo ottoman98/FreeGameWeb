@@ -5,6 +5,7 @@ import List from './components/list';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import GameDetails from './components/gameDetails';
 import genres from './utils/genresArray';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           })}
         </Routes>
       </>
+      <Footer />
     </BrowserRouter>
   );
 }

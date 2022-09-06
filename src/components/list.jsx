@@ -26,32 +26,33 @@ function List() {
         <LoadingPage />
       ) : (
         <>
-          <h2>Latest Releases</h2>
-          <div className="cards-container">
-            {data.slice(0, showMore).map((x) => {
-              return (
-                <Card
-                  key={x.id}
-                  id={x.id}
-                  title={x.title}
-                  img={x.thumbnail}
-                  description={x.short_description}
-                  platform={x.platform}
-                  genre={x.genre}
-                />
-              );
-            })}
+          <div className="main-list-div">
+            <h2>Latest Releases</h2>
+            <div className="cards-container">
+              {data.slice(0, showMore).map((x) => {
+                return (
+                  <Card
+                    key={x.id}
+                    id={x.id}
+                    title={x.title}
+                    img={x.thumbnail}
+                    description={x.short_description}
+                    platform={x.platform}
+                    genre={x.genre}
+                  />
+                );
+              })}
+            </div>
+            <Button
+              onClick={() => {
+                useShowMore(showMore + 12);
+              }}
+              className="showmore-button"
+              variant="info"
+            >
+              show More
+            </Button>
           </div>
-          <Button
-            hidden
-            onClick={() => {
-              useShowMore(showMore + 12);
-            }}
-            className="showmore-button"
-            variant="info"
-          >
-            show More
-          </Button>
         </>
       )}
     </>
