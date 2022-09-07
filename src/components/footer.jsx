@@ -8,9 +8,11 @@ import {
   CDBBox,
 } from 'cdbreact';
 
+import '../styles/footer/footer.css';
+
 function Footer() {
   return (
-    <CDBFooter className="shadow">
+    <CDBFooter className="shadow footer-external-style">
       <CDBBox
         display="flex"
         flex="column"
@@ -33,30 +35,42 @@ function Footer() {
           >
             <CDBBox>
               <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-                Devwares
+                About Me
               </p>
               <CDBBox
                 flex="column"
                 display="flex"
                 style={{ cursor: 'pointer', padding: '0' }}
               >
-                <a href="">osman</a>
-                <a href="">osman</a>
-                <a href="">osman</a>
+                <a href="">Landing page</a>
+              </CDBBox>
+            </CDBBox>
+
+            <CDBBox>
+              <p className="h5 mb-4" style={{ fontWeight: '600' }}>
+                Legal
+              </p>
+              <CDBBox
+                flex="column"
+                display="flex"
+                style={{ cursor: 'pointer', padding: '0' }}
+              >
+                <a href="">Privacy policies</a>
+                <a href="">Data treatment</a>
               </CDBBox>
             </CDBBox>
             <CDBBox>
               <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-                Products
+                related pages
               </p>
               <CDBBox
                 display="flex"
                 flex="column"
                 style={{ cursor: 'pointer', padding: '0' }}
               >
-                <a href="">osman</a>
-                <a href="">osman</a>
-                <a href="">osman</a>
+                <a href=""></a>
+                <a href="">coming soon</a>
+                <a href="">coming soon</a>
               </CDBBox>
             </CDBBox>
           </CDBBox>
@@ -67,15 +81,31 @@ function Footer() {
           </small>
           <CDBBox display="flex">
             <CDBBtn flat color="dark" className="p-2">
-              <CDBIcon fab icon="github" />
+              <a
+                className="icon-footer"
+                href="https://github.com/ottoman98"
+                target="_blank"
+              >
+                <CDBIcon fab icon="github" />
+              </a>
             </CDBBtn>
             <CDBBtn flat color="dark" className="mx-3 p-2">
-              <a href="">
+              <a
+                className="icon-footer"
+                href="https://www.linkedin.com/in/osman-barros/"
+                target="_blank"
+              >
                 <CDBIcon fab icon="linkedin" />
               </a>
             </CDBBtn>
             <CDBBtn flat color="dark" className="p-2">
-              <CDBIcon fab icon="instagram" />
+              <a
+                className="icon-footer"
+                href="https://www.instagram.com/osmanzxc02/?hl=es"
+                target="_blank"
+              >
+                <CDBIcon fab icon="instagram" />
+              </a>
             </CDBBtn>
           </CDBBox>
         </CDBBox>

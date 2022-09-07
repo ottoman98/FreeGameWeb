@@ -1,12 +1,10 @@
-body {
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 30rem;
+.footer-external-style {
+  background-color: #b4c8c8;
+}
+.footer-external-style a {
 }
 
-.footer-external-style {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  top: auto;
+.icon-footer {
+  text-decoration: none;
+  color: #b4c8c8;
 }
