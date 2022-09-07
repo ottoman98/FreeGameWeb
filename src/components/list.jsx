@@ -18,7 +18,7 @@ function List() {
 
   const [showMore, useShowMore] = useState(12);
 
-  data ? console.log(data) : null;
+  data ? null : null;
 
   return (
     <>
