@@ -22,7 +22,11 @@ function Footer() {
         <CDBBox display="flex" justifyContent="between" className="flex-wrap">
           <CDBBox>
             <a href="/" className="d-flex align-items-center p-0 text-dark">
-              <img alt="logo" src="./src/images/gigachad.png" width="30px" />
+              <img
+                alt="logo"
+                src="https://i.redd.it/23td86ox29j51.png"
+                width="30px"
+              />
               <span className="ml-3 h5 font-weight-bold">
                 Developed by Osman
               </span>
@@ -61,7 +65,7 @@ function Footer() {
             </CDBBox>
             <CDBBox>
               <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-                related pages
+                Related pages
               </p>
               <CDBBox
                 display="flex"
