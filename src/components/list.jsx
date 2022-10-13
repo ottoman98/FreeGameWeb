@@ -5,6 +5,7 @@ import useApi from '../hooks/useapi';
 import { useLocation } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import LoadingPage from './loadingPage';
+import { useParams } from 'react-router';
 
 function List() {
   const urlBase =
@@ -17,8 +18,7 @@ function List() {
   const data = useApi(location == '' ? urlBase : urlGenre + location);
 
   const [showMore, useShowMore] = useState(12);
-
-  data ? null : null;
+  console.log(location == '');
 
   return (
     <>
@@ -27,7 +27,12 @@ function List() {
       ) : (
         <>
           <div className="main-list-div">
-            <h2>Latest Releases</h2>
+            {location == '' ? (
+              <h2>Latest Releases</h2>
+            ) : (
+              <h2>{location.charAt(0).toUpperCase() + location.slice(1)}</h2>
+            )}
+
             <div className="cards-container">
               {data.slice(0, showMore).map((x) => {
                 return (

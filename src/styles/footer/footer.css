@@ -1,10 +1,29 @@
+* {
+  position: relative;
+}
+
+#root {
+  min-height: 100%;
+}
+
 .footer-external-style {
   background-color: #b4c8c8;
-}
-.footer-external-style a {
 }
 
 .icon-footer {
   text-decoration: none;
   color: #b4c8c8;
+}
+
+footer {
+  bottom: 0;
+}
+
+.rights {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.rights small {
+  margin: 5px;
 }

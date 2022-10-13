@@ -21,7 +21,11 @@ function Footer() {
       >
         <CDBBox display="flex" justifyContent="between" className="flex-wrap">
           <CDBBox>
-            <a href="/" className="d-flex align-items-center p-0 text-dark">
+            <a
+              href="https://github.com/ottoman98"
+              className="d-flex align-items-center p-0 text-dark"
+              target="_blank"
+            >
               <img
                 alt="logo"
                 src="https://i.redd.it/23td86ox29j51.png"
@@ -34,8 +38,9 @@ function Footer() {
           </CDBBox>
           <CDBBox
             display="flex"
-            style={{ width: '50%' }}
+            style={{ width: '50%', margin: '10px auto' }}
             justifyContent="between"
+            className={'flex-wrap'}
           >
             <CDBBox>
               <p className="h5 mb-4" style={{ fontWeight: '600' }}>
@@ -79,7 +84,7 @@ function Footer() {
             </CDBBox>
           </CDBBox>
         </CDBBox>
-        <CDBBox display="flex" className="mt-4" justifyContent="between">
+        <CDBBox display="flex" className="mt-4 rights" justifyContent="between">
           <small className="ml-2">
             &copy; Osman, 2022. All rights reserved.
           </small>

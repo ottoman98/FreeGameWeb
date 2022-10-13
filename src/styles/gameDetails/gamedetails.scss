@@ -3,6 +3,7 @@
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
+  min-height: 100vh;
 }
 .img-detail {
   max-width: 100%;
@@ -26,11 +27,15 @@
 .screenshots {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 .screenshot {
-  max-width: 40vw;
-  max-height: 40vh;
+  max-width: 60%;
+
   margin: 10px;
   border-radius: 5%;
+}
+
+.main-div {
+  min-height: 100vh;
 }

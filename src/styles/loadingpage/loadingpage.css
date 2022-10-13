@@ -1,5 +1,5 @@
-body {
-  height: 100vh;
+#load-container {
+  min-height: 100vh;
 }
 
 .container {
@@ -25,7 +25,7 @@ body {
   left: 0;
   z-index: 1;
   -webkit-animation: item-1_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
-  animation: item-1_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
+          animation: item-1_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
 }
 
 .item-2 {
@@ -33,7 +33,7 @@ body {
   top: 0;
   right: 0;
   -webkit-animation: item-2_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
-  animation: item-2_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
+          animation: item-2_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
 }
 
 .item-3 {
@@ -42,7 +42,7 @@ body {
   right: 0;
   z-index: 1;
   -webkit-animation: item-3_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
-  animation: item-3_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
+          animation: item-3_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
 }
 
 .item-4 {
@@ -50,12 +50,11 @@ body {
   bottom: 0;
   left: 0;
   -webkit-animation: item-4_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
-  animation: item-4_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
+          animation: item-4_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
 }
 
 @-webkit-keyframes item-1_move {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   25% {
@@ -70,8 +69,7 @@ body {
 }
 
 @keyframes item-1_move {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   25% {
@@ -85,8 +83,7 @@ body {
   }
 }
 @-webkit-keyframes item-2_move {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   25% {
@@ -100,8 +97,7 @@ body {
   }
 }
 @keyframes item-2_move {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   25% {
@@ -115,8 +111,7 @@ body {
   }
 }
 @-webkit-keyframes item-3_move {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   25% {
@@ -130,8 +125,7 @@ body {
   }
 }
 @keyframes item-3_move {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   25% {
@@ -145,8 +139,7 @@ body {
   }
 }
 @-webkit-keyframes item-4_move {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   25% {
@@ -160,8 +153,7 @@ body {
   }
 }
 @keyframes item-4_move {
-  0%,
-  100% {
+  0%, 100% {
     transform: translate(0, 0);
   }
   25% {
@@ -173,4 +165,4 @@ body {
   75% {
     transform: translate(0, -100px);
   }
-} /*# sourceMappingURL=loadingpage.css.map */
+}/*# sourceMappingURL=loadingpage.css.map */

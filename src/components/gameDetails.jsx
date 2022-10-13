@@ -19,6 +19,7 @@ function GameDetails() {
         <>
           <div
             className="main-div"
+            key={id}
             style={{
               background: `url(${
                 data.screenshots.length > 0 ? data.screenshots[0].image : ''
@@ -39,7 +40,7 @@ function GameDetails() {
                   {data.platform}
                 </p>
                 <p>
-                  <b>Developer:</b>
+                  <b>Developer: </b>
                   {data.developer}
                 </p>
                 <p>
@@ -61,8 +62,10 @@ function GameDetails() {
                     {Object.keys(data.minimum_system_requirements).map((x) => {
                       return (
                         <ul>
-                          <li key={1}>
-                            <b>{x.charAt(0).toUpperCase() + x.slice(1)}: </b>
+                          <li key={x}>
+                            <b key={data.x}>
+                              {x.charAt(0).toUpperCase() + x.slice(1)}:{' '}
+                            </b>
                             {data.minimum_system_requirements[x]}
                           </li>
                         </ul>
