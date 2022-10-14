@@ -2,14 +2,14 @@ import { React, useState, useEffect } from 'react';
 import NavScroll from './components/header';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import List from './components/list';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom';
 import GameDetails from './components/gameDetails';
 import genres from './utils/genresArray';
 import Footer from './components/footer';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter hashTypes="hashbang">
       <>
         <NavScroll />
         <Routes>
@@ -28,7 +28,7 @@ function App() {
         </Routes>
       </>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
