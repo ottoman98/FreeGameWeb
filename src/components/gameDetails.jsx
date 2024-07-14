@@ -1,14 +1,14 @@
-import React from 'react';
-import useApi from '../hooks/useapi';
-import { useParams } from 'react-router';
-import '../styles/gameDetails/gamedetails.css';
-import LoadingPage from './loadingPage';
+import React from "react";
+import useApi from "../hooks/useApi";
+import { useParams } from "react-router";
+import "../styles/gameDetails/gamedetails.css";
+import LoadingPage from "./loadingPage";
 
 function GameDetails() {
   const { id } = useParams();
 
   const data = useApi(
-    'https://free-to-play-games-database.p.rapidapi.com/api/game?id=' + id
+    "https://free-to-play-games-database.p.rapidapi.com/api/game?id=" + id
   );
 
   return (
@@ -22,9 +22,9 @@ function GameDetails() {
             key={id}
             style={{
               background: `url(${
-                data.screenshots.length > 0 ? data.screenshots[0].image : ''
+                data.screenshots.length > 0 ? data.screenshots[0].image : ""
               }) no-repeat`,
-              backgroundSize: 'cover',
+              backgroundSize: "cover",
             }}
           >
             <div className="details-content">
@@ -54,7 +54,7 @@ function GameDetails() {
 
               <p className="details-description">{data.description}</p>
 
-              {data.hasOwnProperty('minimum_system_requirements') ? (
+              {data.hasOwnProperty("minimum_system_requirements") ? (
                 <>
                   <h4>Minimum system requirements</h4>
 
@@ -64,7 +64,7 @@ function GameDetails() {
                         <ul>
                           <li key={x}>
                             <b key={data.x}>
-                              {x.charAt(0).toUpperCase() + x.slice(1)}:{' '}
+                              {x.charAt(0).toUpperCase() + x.slice(1)}:{" "}
                             </b>
                             {data.minimum_system_requirements[x]}
                           </li>
