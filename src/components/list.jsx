@@ -1,24 +1,24 @@
-import { React, useState, useEffect } from 'react';
-import Card from './card';
-import '../styles/list/list.css';
-import useApi from '../hooks/useapi';
-import { useLocation } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import LoadingPage from './loadingPage';
-import { useParams } from 'react-router';
+import { React, useState, useEffect } from "react";
+import Card from "./card";
+import "../styles/list/list.css";
+import useApi from "../hooks/useApi";
+import { useLocation } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import LoadingPage from "./loadingPage";
+import { useParams } from "react-router";
 
 function List() {
   const urlBase =
-    'https://free-to-play-games-database.p.rapidapi.com/api/games';
+    "https://free-to-play-games-database.p.rapidapi.com/api/games";
   const urlGenre =
-    'https://free-to-play-games-database.p.rapidapi.com/api/games?category=';
+    "https://free-to-play-games-database.p.rapidapi.com/api/games?category=";
 
-  const location = useLocation().pathname.replace('/', '');
+  const location = useLocation().pathname.replace("/", "");
 
-  const data = useApi(location == '' ? urlBase : urlGenre + location);
+  const data = useApi(location == "" ? urlBase : urlGenre + location);
 
   const [showMore, useShowMore] = useState(12);
-  console.log(location == '');
+  console.log(location == "");
 
   return (
     <>
@@ -27,7 +27,7 @@ function List() {
       ) : (
         <>
           <div className="main-list-div">
-            {location == '' ? (
+            {location == "" ? (
               <h2>Latest Releases</h2>
             ) : (
               <h2>{location.charAt(0).toUpperCase() + location.slice(1)}</h2>

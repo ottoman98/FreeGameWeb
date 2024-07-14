@@ -1,14 +1,14 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState, useEffect } from "react";
 
 const useApi = (url) => {
   const [data, setData] = useState();
   const route = url;
   const apiFetch = (url) => {
     const options = {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'X-RapidAPI-Key': '30345a29c4msha38c111e7f770d6p177732jsn1884b167df54',
-        'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
+        "X-RapidAPI-Key": "30345a29c4msha38c111e7f770d6p177732jsn1884b167df54",
+        "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
       },
     };
 
